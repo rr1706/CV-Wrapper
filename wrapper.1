@@ -1,0 +1,36 @@
+.Dd 12/01/14
+.Dt wrapper 1
+.Os 1706
+.Sh NAME
+.Nm wrapper
+.Nd Record and filter input from video 
+.Sh SYNOPSIS
+.Nm
+.Op Fl C Ar camera_id
+.Op Fl f Ar file
+.Op Fl ckvpil
+.Sh DESCRIPTION
+Pump an input into a program or other output.
+.Pp
+A list of flags and their descriptions:
+.Bl -tag -width -indent
+.It Fl C Ar camera_id
+Read from the specified camera.
+.It Fl f Ar file
+Load a picture or video from the specified file. Used in combination
+with the -p or -v flags.
+.It Fl c
+Use a normal camera as input.
+.It Fl k
+Use a kinect as input.
+.It Fl v
+Use the video file specified by the -f argument as input in loop.
+.It Fl p
+Use the picture specified by the -f argument to start as input. The
+wrapper will ask to continue interactively.
+.It Fl i
+Use infrared as the color for the input.
+.It Fl l
+Use visible light as the color model for the input.
+
+.El
